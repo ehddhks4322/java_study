@@ -1,0 +1,10 @@
+package mypage;
+
+public class MemberService {
+	//회원정보 조회
+	public void MemberCheck() {
+		Member mb = new Member();
+	}
+	
+	//회원정보 파일로 저장
+}

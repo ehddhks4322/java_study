@@ -1,0 +1,7 @@
+package mypage;
+
+public class MemberService extends Member{
+	public MemberService() {
+		
+	}
+}

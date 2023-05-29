@@ -1,0 +1,21 @@
+package mypage;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+import javax.swing.JTextField;
+
+public class Member {
+	private JTextField id,pw,name,tel,gender;
+
+	
+	//회원정보 파일로 저장
+	public Member() {
+		try {
+			FileOutputStream fos = new FileOutputStream("D:\\java_study");
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+		}
+	}
+}

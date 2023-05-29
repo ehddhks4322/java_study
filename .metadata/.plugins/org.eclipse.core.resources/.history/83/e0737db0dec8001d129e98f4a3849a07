@@ -1,0 +1,37 @@
+package mypage;
+
+public class Member implements ActionListener {
+    private JTextField id, pw, name, tel, gender;
+
+    public Member(JTextField id, JTextField pw, JTextField name, JTextField tel, JTextField gender) {
+        this.id = id;
+        this.pw = pw;
+        this.name = name;
+        this.tel = tel;
+        this.gender = gender;
+    }
+
+    // ActionListener 인터페이스의 메소드 구현
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        try {
+            FileOutputStream fos = new FileOutputStream("D:\\java_study\\member.txt", true);
+
+            String idData = id.getText() + "\n";
+            String pwData = pw.getText() + "\n";
+            String nameData = name.getText() + "\n";
+            String telData = tel.getText() + "\n";
+            String genderData = gender.getText() + "\n";
+
+            fos.write(idData.getBytes());
+            fos.write(pwData.getBytes());
+            fos.write(nameData.getBytes());
+            fos.write(telData.getBytes());
+            fos.write(genderData.getBytes());
+
+            fos.close();
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
+    }
+}

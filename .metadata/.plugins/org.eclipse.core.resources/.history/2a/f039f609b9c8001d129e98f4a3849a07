@@ -1,0 +1,5 @@
+package mypage;
+
+public class Member {
+	private String id,pw,name,tel,gender,age;
+}

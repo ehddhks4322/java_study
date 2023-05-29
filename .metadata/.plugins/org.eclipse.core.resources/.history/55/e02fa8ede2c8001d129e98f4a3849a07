@@ -1,0 +1,46 @@
+package mypage;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.FileOutputStream;
+
+import javax.swing.JTextField;
+
+public class Member implements ActionListener {
+    private JTextField id, pw, name, tel, gender,age;
+
+    public Member(JTextField idField, JTextField pwField, JTextField nField, JTextField tField, JTextField gField, JTextField aField) {
+        this.id = idField;
+        this.pw = pwField;
+        this.name = nField;
+        this.tel = tField;
+        this.gender = gField;
+        this.age = aField;
+    }
+
+    // ActionListener 인터페이스의 메소드 구현
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        try {
+            FileOutputStream fos = new FileOutputStream("D:\\java_study\\member.txt", true);
+
+            String idData = id.getText() + "\n";
+            String pwData = pw.getText() + "\n";
+            String nameData = name.getText() + "\n";
+            String telData = tel.getText() + "\n";
+            String genderData = gender.getText() + "\n";
+            String ageData = age.getText() + "\n";
+
+            fos.write(idData.getBytes());
+            fos.write(pwData.getBytes());
+            fos.write(nameData.getBytes());
+            fos.write(telData.getBytes());
+            fos.write(genderData.getBytes());
+            fos.write(ageData.getBytes());
+
+            fos.close();
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
+    }
+}

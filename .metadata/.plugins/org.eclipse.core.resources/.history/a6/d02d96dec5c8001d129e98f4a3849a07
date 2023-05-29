@@ -1,0 +1,9 @@
+package mypage;
+
+public class MemberService {
+	//회원정보 조회
+	public void MemberCheck() {
+		Member mb = new Member();
+		if(mb.get)
+	}
+}

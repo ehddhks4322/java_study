@@ -1,0 +1,95 @@
+package mypage;
+
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class MyPage extends JFrame{
+	
+	public MyPage() {
+		super("마이페이지");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		JPanel jp = new JPanel();
+		jp.setBackground(Color.WHITE);
+		jp.setLayout(null);
+		
+		Font font1 = new Font("Serif", Font.BOLD, 30);
+		
+		
+		//아이디
+		JLabel idLabel = new JLabel("아이디 : ");
+		idLabel.setBounds(90,90,100,15);
+		jp.add(idLabel);
+		
+		JTextField idField = new JTextField();
+		idField.setBounds(140, 88, 130, 21);
+		idField.setEditable(false);
+		jp.add(idField);
+		
+		//비밀번호
+		JLabel pwLabel = new JLabel("비밀번호 : ");
+		pwLabel.setBounds(79, 130, 100, 15);
+		jp.add(pwLabel);
+		
+		JPasswordField pwField = new JPasswordField();
+		pwField.setBounds(140, 128, 130, 21);
+		pwField.setEditable(false);
+		jp.add(pwField);
+		
+		//이름
+		JLabel name = new JLabel("이름 : ");
+		name.setBounds(102, 165, 100, 15);
+		jp.add(name);
+		
+		JTextField nField = new JPasswordField();
+		nField.setBounds(140, 168, 130, 21);
+		nField.setEditable(false);
+		jp.add(nField);
+		
+		//전화번호
+		JLabel tel = new JLabel("전화번호 : ");
+		tel.setBounds(79, 205, 100, 15);
+		jp.add(tel);
+		
+		JTextField tField = new JTextField();
+		tField.setBounds(140, 203, 130, 21);
+		tField.setEditable(false);
+		jp.add(tField);		
+		
+		//성별
+		JLabel gender = new JLabel("성별 : ");
+		gender.setBounds(102, 245, 100, 15);
+		jp.add(gender);
+		
+		JTextField gField = new JTextField();
+		gField.setBounds(140, 243, 80, 21);
+		gField.setEditable(false);
+		jp.add(gField);
+		
+		//나이
+		JLabel age = new JLabel("나이 : ");
+		age.setBounds(102, 285, 100, 15);
+		jp.add(age);
+		
+		JTextField aField = new JTextField();
+		aField.setBounds(140, 283, 80, 21);
+		aField.setEditable(false);
+		jp.add(aField);
+		
+		
+		
+		this.add(jp);
+		
+		setBounds(700, 200, 460, 690);
+		setVisible(true);
+		
+	}
+	
+	
+}

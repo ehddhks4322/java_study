@@ -1,0 +1,38 @@
+package mypage;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+import javax.swing.JTextField;
+
+public class Member implements ActionListener{
+	private JTextField id,pw,name,tel,gender;
+
+	
+	//회원정보 파일로 저장
+	public Member(JTextField id, JTextField pw, JTextField name, JTextField tel, JTextField gender) {
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.tel = tel;
+		this.gender = gender;
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		try {
+			FileOutputStream fos = new FileOutputStream("D:\\java_study");
+		} catch (Exception e1) {
+			
+			e1.printStackTrace();
+		}
+		
+	}
+	
+	//회원정보 조회
+	public void MemberCheck() {
+		
+	}
+}
